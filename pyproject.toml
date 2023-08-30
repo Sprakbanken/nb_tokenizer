@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "nb_tokenizer"
+version = "0.1.0"
+description = "Tokenization of Norwegian texts"
+authors = ["The DH-lab at the National Library of Norway <dh-lab@nb.no>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "nb_tokenizer.py", from ="src" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
