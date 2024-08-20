@@ -425,7 +425,7 @@ la tegnet være sitt eget token og gå videre.
 """
 
 
-def tokenize_timer(text):
+def tokenize_timer(text: str) -> list:
     """Time the :func:`tokenize` function and return the resulting tokens."""
     t0 = time.process_time()
     tokens = tokenize(text)
@@ -435,8 +435,8 @@ def tokenize_timer(text):
     return tokens
 
 
-def tokenize(text):
-    """Tokenize the input ``text`` with the ``regex`` pattern."""
+def tokenize(text: str) -> list:
+    """Tokenize the input ``text`` with the default ``regex`` pattern."""
     tokens = re.findall(regex, text)
     return tokens
 
